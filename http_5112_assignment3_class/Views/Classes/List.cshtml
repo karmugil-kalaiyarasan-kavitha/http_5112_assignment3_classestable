@@ -1,0 +1,35 @@
+﻿@using http_5112_assignment3_class.Models;
+@model IEnumerable<http_5112_assignment3_class.Models.Classes>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Classes List</h2>
+
+@foreach (var Classes in Model)
+{
+    <div>
+        <table>
+            <tr>
+                <th>Teacher ID</th>
+                <th>Class ID</th>
+                <th>Class Code</th>
+                <th>Start Date</th>
+                <th>Finish Date</th>
+                <th>Class Name</th>
+            </tr>
+            <tr>
+                <td><a href="/Classes/ShowClasses/@Classes.teacherId">@Classes.teacherId</a></td>
+                <td>@Classes.classId</td>
+                
+                <td>@Classes.classCode</td>
+                <td>@Classes.startDate</td>
+                <td>@Classes.finishDate</td>
+                <td>@Classes.className</td>
+            </tr>
+        </table>
+
+    </div>
+}
+
